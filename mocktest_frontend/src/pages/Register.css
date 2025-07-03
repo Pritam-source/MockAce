@@ -1,0 +1,165 @@
+/* Register.css */
+
+.register-root {
+  min-height: 100vh;
+  background: #1174f4;
+  font-family: 'Segoe UI', 'Inter', Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* <-- Move content to the left */
+}
+
+.register-flex {
+  display: flex;
+  align-items: stretch;
+  max-width: 1440px;    /* <-- Make main container wider */
+  width: 100vw;
+  background: none;
+  margin-left: 3vw;     /* <-- Push content closer to left edge */
+  gap: 60px;            /* <-- Increase gap between panels */
+}
+
+.register-form-card {
+  background: #fff;
+  border-radius: 18px;
+  min-width: 360px;
+  max-width: 420px;
+  box-shadow: 0 6px 36px #0952aa22;
+  padding: 38px 34px 30px 34px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.register-title {
+  font-weight: 700;
+  font-size: 1.7rem;
+  margin-bottom: 6px;
+  color: #212d3b;
+}
+
+.register-subtext {
+  font-size: 1rem;
+  margin-bottom: 16px;
+  color: #616161;
+}
+
+.register-link {
+  color: #1174f4;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.register-instructions {
+  background: #f5f8ff;
+  padding: 14px;
+  border-radius: 7px;
+  margin-bottom: 22px;
+  font-size: 1rem;
+  color: #324273;
+}
+
+.register-instructions ul {
+  margin: 7px 0 0 16px;
+  padding: 0;
+}
+
+.register-input {
+  width: 100%;
+  margin-bottom: 14px;
+  padding: 13px 12px;
+  border-radius: 7px;
+  border: 1.3px solid #dbeafe;
+  background: #f5f8ff;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.register-input:last-of-type {
+  margin-bottom: 16px;
+}
+
+.register-btn {
+  width: 100%;
+  padding: 12px 0;
+  background: #1174f4;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  font-weight: bold;
+  font-size: 1.09rem;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.register-success {
+  color: #19a828;
+  margin: 8px 0 0 0;
+  font-size: 1rem;
+}
+
+.register-error {
+  color: #e53935;
+  margin: 8px 0 0 0;
+  font-size: 1rem;
+  white-space: pre-wrap;
+}
+
+/* Info panel (right) */
+.register-info-panel {
+  flex: 1.7;                 /* <-- Make info panel much wider */
+  min-width: 500px;          /* <-- Set a wider minimum */
+  max-width: 800px;          /* <-- Allow for a broader panel */
+  background: transparent;
+  border-radius: 16px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 48px 70px 48px 70px;   /* <-- More padding for wide area */
+  font-size: 1.0rem;
+  line-height: 2.08;
+  font-family: 'Segoe UI', 'Inter', Arial, sans-serif;
+  
+}
+
+.register-info-brand {
+  margin-bottom: 16px;
+  font-weight: bold;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+}
+
+.register-info-headline {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 18px;
+  line-height: 1.3;
+}
+
+.register-info-desc {
+  color: #dde8fa;
+  margin-bottom: 0;
+  font-size: 1.12rem;
+}
+
+@media (max-width: 1100px) {
+  .register-flex {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+    gap: 30px;
+    max-width: 98vw;
+  }
+  .register-form-card,
+  .register-info-panel {
+    min-width: 90vw;
+    max-width: 98vw;
+    padding: 22px 4vw;
+  }
+  .register-info-panel {
+    padding: 22px 4vw;
+  }
+}

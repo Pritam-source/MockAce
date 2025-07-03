@@ -1,0 +1,225 @@
+.login-root {
+  min-height: 100vh;
+  background: #1174f4;
+  font-family: 'Segoe UI', 'Inter', Arial, sans-serif;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-flex {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 1900px;  /* Increased max-width */
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 90px;
+  gap: 150px; /* More space between left and right */
+}
+
+/* LEFT PANEL */
+.login-left-panel {
+  flex: 2; /* Increase flex for more space on left */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 32px;
+  min-width: 500px;
+  max-width: 1100px;
+  background: none;
+}
+
+.login-brand {
+  margin-bottom: 36px;
+  font-weight: bold;
+  font-size: 2.7rem;
+  letter-spacing: 1px;
+  color: #fff;
+  text-align: center    ;
+  display: flex;
+  align-items: center;
+  font-family: 'Fira Mono', 'JetBrains Mono', 'Consolas', monospace;
+}
+
+/* Typewriter effect box */
+.code-typewriter {
+  background: rgba(8,24,40,0.17);
+  border-radius: 10px;
+  padding: 22px 36px;
+  font-family: 'Fira Mono', 'JetBrains Mono', 'Consolas', monospace;
+  font-size: 1.0rem;   /* Decreased font size */
+  width: 100%;
+  max-width: 1220px;    /* Wider code box */
+  color: #fff;
+  box-shadow: 0 8px 38px #0952aa22;
+  margin: 0;
+  white-space: nowrap;
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* RIGHT PANEL */
+.login-right-panel {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-right: 80px; /* Extra space on the right */
+  min-width: 420px;
+}
+
+.login-form-card {
+  background: #fff;
+  border-radius: 18px;
+  min-width: 370px;
+  max-width: 430px;
+  box-shadow: 0 6px 36px #0952aa22;
+  padding: 38px 34px 30px 34px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-title {
+  font-weight: 700;
+  font-size: 22px;
+  margin-bottom: 4px;
+  color: #212d3b;
+}
+
+.login-subtext {
+  font-size: 15px;
+  margin-bottom: 16px;
+  color: #616161;
+}
+
+.login-link {
+  color: #1174f4;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.login-input {
+  width: 100%;
+  margin-bottom: 18px;
+  padding: 13px 12px;
+  border-radius: 7px;
+  border: 1.3px solid #dbeafe;
+  background: #f5f8ff;
+  font-size: 15px;
+  font-family: inherit;
+}
+
+.login-input:last-of-type {
+  margin-bottom: 12px;
+}
+
+.login-remember {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.login-checkbox {
+  margin-right: 7px;
+  accent-color: #1174f4;
+}
+
+.login-checkbox-label {
+  font-size: 14px;
+  color: #616161;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 12px 0;
+  background: #1174f4;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  font-weight: bold;
+  font-size: 17px;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.login-forgot {
+  text-align: right;
+  margin-bottom: 16px;
+}
+
+.login-forgot-link {
+  font-size: 14px;
+  color: #1174f4;
+  text-decoration: none;
+}
+
+.login-error {
+  color: #e53935;
+  margin: 0 0 14px 0;
+  font-size: 14px;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 1400px) {
+  .login-flex {
+    gap: 50px;
+    max-width: 98vw;
+  }
+  .login-left-panel {
+    min-width: 300px;
+    max-width: 98vw;
+  }
+  .code-typewriter {
+    max-width: 85vw;
+    font-size: 0.93rem;
+    padding: 17px 8px;
+  }
+  .login-right-panel {
+    padding-right: 0;
+  }
+}
+@media (max-width: 900px) {
+  .login-flex {
+    flex-direction: column;
+    gap: 24px;
+    padding-top: 22px;
+    align-items: center;
+  }
+  .login-left-panel {
+    align-items: center;
+    padding-left: 0;
+    min-width: 260px;
+    max-width: 98vw;
+  }
+  .code-typewriter {
+    max-width: 96vw;
+    font-size: 0.86rem;
+    padding: 12px 4px;
+  }
+  .login-right-panel {
+    padding-right: 0;
+  }
+}
+.beta-badge {
+  display: inline-block;
+  margin-left: 11px;
+  background: linear-gradient(90deg, #ffe59c 50%, #fff3c6 100%);
+  color: #584b13;
+  font-size: 0.92rem;
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 2px 13px 2px 11px;
+  letter-spacing: 1px;
+  vertical-align: middle;
+  box-shadow: 0 1px 8px #ffd78c29;
+  border: 1.3px solid #fae48c;
+  text-shadow: 0 1px 3px #ffeebb42;
+}

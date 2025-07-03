@@ -1,0 +1,125 @@
+/* ScorePage.css */
+
+.scorepage-root {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f4f8fb;
+  font-family: 'Segoe UI', 'Inter', Arial, sans-serif;
+}
+
+.scorepage-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 24px #11356413;
+  padding: 52px 48px 44px 48px;
+  min-width: 400px;
+  max-width: 480px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.scorepage-title {
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  color: #267cfb;
+  letter-spacing: 1px;
+}
+
+.scorepage-scorelabel {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a237e;
+  margin: 10px 0 8px 0;
+}
+
+.scorepage-score {
+  font-size: 46px;
+  font-weight: 900;
+  margin-bottom: 12px;
+}
+
+.scorepage-score.passed {
+  color: #4caf50;
+}
+.scorepage-score.failed {
+  color: #e53935;
+}
+
+.scorepage-total {
+  font-size: 24px;
+  color: #888;
+}
+
+.scorepage-percent-row {
+  font-size: 20px;
+  font-weight: 700;
+  color: #324273;
+  margin-bottom: 10px;
+}
+
+.scorepage-pass {
+  color: #4caf50;
+}
+
+.scorepage-fail {
+  color: #e53935;
+}
+
+.scorepage-timetaken {
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.scorepage-section-breakdown {
+  margin: 16px 0 20px 0;
+  font-size: 15px;
+  color: #39455e;
+  text-align: left;
+}
+
+.scorepage-section-breakdown ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 8px;
+}
+
+.scorepage-section-breakdown li {
+  margin-bottom: 5px;
+}
+
+.scorepage-btnrow {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.scorepage-btn-primary {
+  background: #267cfb;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  padding: 10px 26px;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.scorepage-btn-success {
+  background: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  padding: 10px 26px;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.scorepage-error {
+  color: #e53935;
+}

@@ -1,0 +1,122 @@
+/* ReviewPage.css */
+
+.reviewpage-root {
+  min-height: 100vh;
+  background: #f4f8fb;
+  font-family: 'Segoe UI', 'Inter', Arial, sans-serif;
+  padding: 38px 0;
+}
+
+.reviewpage-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.reviewpage-header {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 3px 14px #19346317;
+  padding: 36px 38px 16px 38px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.reviewpage-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: #267cfb;
+}
+
+.reviewpage-score {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 6px;
+  color: #2c3149;
+}
+
+.reviewpage-score-value {
+  color: #4caf50;
+}
+
+.reviewpage-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 14px #19346311;
+  padding: 28px 30px 16px 30px;
+  margin-bottom: 24px;
+}
+
+.reviewpage-question {
+  font-weight: 700;
+  font-size: 17px;
+  margin-bottom: 10px;
+  color: #212d3b;
+}
+
+.reviewpage-option {
+  padding: 7px 12px;
+  border-radius: 6px;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  border: 1px solid transparent;
+  background: none;
+  color: #222;
+  font-weight: 500;
+}
+
+.reviewpage-option.selected {
+  background: #e3edfa;
+  border: 1px solid #267cfb88;
+}
+
+.reviewpage-option.correct {
+  color: #4caf50;
+  font-weight: 700;
+}
+
+.reviewpage-option .reviewpage-correct-mark {
+  margin-left: 16px;
+  color: #388e3c;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.reviewpage-option .reviewpage-your-choice {
+  margin-left: 16px;
+  color: #e53935;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.reviewpage-explanation {
+  background: #f7faf4;
+  border-radius: 9px;
+  padding: 13px 18px;
+  margin-top: 13px;
+  font-size: 15px;
+  color: #2d3922;
+}
+
+.reviewpage-btn {
+  background: #267cfb;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  padding: 10px 32px;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.reviewpage-loading-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 24px #11356413;
+  padding: 52px 48px 44px 48px;
+  min-width: 400px;
+  max-width: 480px;
+  text-align: center;
+  margin: 0 auto;
+}
