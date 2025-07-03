@@ -85,7 +85,7 @@ WSGI_APPLICATION = "MockTestEng.wsgi.application"
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'MockTest_DB',      # your database name
+        'NAME': 'mocktest_db',      # your database name
         'USER': 'postgres',         # or your custom username
         'PASSWORD': 'Mocktest14!',# your password
         'HOST': 'localhost',        # or '127.0.0.1'
