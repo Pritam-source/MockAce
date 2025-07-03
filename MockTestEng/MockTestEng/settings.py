@@ -12,8 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
-from django.conf import settings
-from django.conf.urls.static import static
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -84,16 +83,22 @@ WSGI_APPLICATION = "MockTestEng.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+import dj_database_url
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'mocktest_db',      # your database name
-        'USER': 'postgres',         # or your custom username
-        'PASSWORD': 'Mocktest14!',# your password
-        'HOST': 'localhost',        # or '127.0.0.1'
-        'PORT': '5432',             # default Postgres port
-    }
+    'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
 }
+
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.postgresql',
+#        'NAME': 'mocktest_db',      # your database name
+ #       'USER': 'postgres',         # or your custom username
+#        'PASSWORD': 'Mocktest14!',# your password
+#        'HOST': 'localhost',        # or '127.0.0.1'
+ #       'PORT': '5432',             # default Postgres port
+ #   }
+#}
 
 
 # Password validation
@@ -143,3 +148,5 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.TokenAuthentication',
     ],
 }
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
