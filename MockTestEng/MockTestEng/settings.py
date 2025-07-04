@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-%l57wa^jbj#&y4qfz(1pza-*v=hgm_c3vuab^b%@%)3b&7@&*9
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['mockace.in', 'www.mockace.in', '127.0.0.1']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
