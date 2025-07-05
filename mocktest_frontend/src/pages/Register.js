@@ -30,7 +30,7 @@ function Register({ onShowLogin }) {
     setSuccess('');
     setError('');
     try {
-      await axios.post('http://127.0.0.1:8000/api/users/register/', form);
+      await axios.post(`${process.env.REACT_APP_API_URL}/api/users/register/`, form);;
       setSuccess('Registration successful! You can now login.');
       setForm({ username: '', email: '', password: '' });
     } catch (err) {
