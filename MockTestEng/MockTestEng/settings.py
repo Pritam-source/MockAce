@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-%l57wa^jbj#&y4qfz(1pza-*v=hgm_c3vuab^b%@%)3b&7@&*9"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 CORS_ALLOWED_ORIGINS = ['https://mock-ace.vercel.app']
@@ -93,13 +93,13 @@ DATABASES = {
 
 #DATABASES = {
 #    'default': {
-#        'ENGINE': 'django.db.backends.postgresql',
-#        'NAME': 'mocktest_db',      # your database name
- #       'USER': 'postgres',         # or your custom username
-#        'PASSWORD': 'Mocktest14!',# your password
-#        'HOST': 'localhost',        # or '127.0.0.1'
- #       'PORT': '5432',             # default Postgres port
- #   }
+ #     'ENGINE': 'django.db.backends.postgresql',
+#       'NAME': 'mocktest_db',      # your database name
+ #      'USER': 'postgres',         # or your custom username
+ #       'PASSWORD': 'Mocktest14!',# your password
+ #       'HOST': 'localhost',        # or '127.0.0.1'
+  #      'PORT': '5432',             # default Postgres port
+  #  }
 #}
 
 
