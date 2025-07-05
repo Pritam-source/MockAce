@@ -14,7 +14,7 @@ function Dashboard() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get('http://127.0.0.1:8000/api/exams/packages/')
+    axios.get('${process.env.REACT_APP_API_URL}/api/exams/packages/')
       .then(response => {
         setPackages(response.data);
         setLoading(false);
@@ -25,7 +25,7 @@ function Dashboard() {
       });
 
     const token = localStorage.getItem('token');
-    axios.get('http://127.0.0.1:8000/api/users/me/', {
+    axios.get('${process.env.REACT_APP_API_URL}/api/users/me/', {
       headers: { Authorization: `Token ${token}` }
     })
       .then(res => setUser(res.data))

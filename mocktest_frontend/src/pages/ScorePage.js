@@ -16,7 +16,7 @@ function ScorePage({ token }) {
       navigate('/');
       return;
     }
-    axios.get(`http://127.0.0.1:8000/api/exams/result/${mockTestId}/`, {
+    axios.get(`${process.env.REACT_APP_API_URL}/api/exams/result/${mockTestId}/`, {
       headers: { Authorization: `Token ${token}` }
     })
       .then(res => {

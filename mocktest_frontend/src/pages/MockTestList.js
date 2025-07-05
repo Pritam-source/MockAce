@@ -20,7 +20,7 @@ function MockTestList() {
   useEffect(() => {
     // 1. Fetch subscription status
     if (token && packageId) {
-      axios.get(`http://127.0.0.1:8000/api/subscriptions/status/${packageId}/`, {
+      axios.get(`${process.env.REACT_APP_API_URL}/api/subscriptions/status/${packageId}/`, {
         headers: { Authorization: `Token ${token}` }
       })
       .then(res => {
@@ -30,14 +30,14 @@ function MockTestList() {
     }
 
     // 2. Fetch all mock tests for this package
-    axios.get('http://127.0.0.1:8000/api/exams/mock-tests/')
+    axios.get('${process.env.REACT_APP_API_URL}/api/exams/mock-tests/')
       .then(res => {
         const filtered = res.data.filter(mt => mt.exam_package === parseInt(packageId));
         setMockTests(filtered);
         setLoading(false);
         // Check result/attempt status for each mock test
         filtered.forEach(test => {
-          axios.get(`http://127.0.0.1:8000/api/exams/result/${test.id}/`, {
+          axios.get(`${process.env.REACT_APP_API_URL}/api/exams/result/${test.id}/`, {
             headers: { Authorization: `Token ${token}` }
           })
             .then(() => setSubmissionStatus(prev => ({ ...prev, [test.id]: true })))
@@ -45,7 +45,7 @@ function MockTestList() {
         });
       });
     // 3. Fetch package name
-    axios.get('http://127.0.0.1:8000/api/exams/packages/')
+    axios.get('${process.env.REACT_APP_API_URL}/api/exams/packages/')
       .then(res => {
         const pkg = res.data.find(p => p.id === parseInt(packageId));
         setPackageName(pkg ? pkg.name : '');

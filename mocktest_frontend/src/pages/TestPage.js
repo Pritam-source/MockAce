@@ -24,7 +24,7 @@ function TestPage({ token }) {
 
   useEffect(() => {
     axios.post(
-      `http://127.0.0.1:8000/api/exams/start-test/${mockTestId}/`,
+      `${process.env.REACT_APP_API_URL}/api/exams/start-test/${mockTestId}/`,
       {},
       { headers: { Authorization: `Token ${token}` } }
     )
@@ -125,7 +125,7 @@ function TestPage({ token }) {
 
     try {
       await axios.post(
-        `http://127.0.0.1:8000/api/exams/submit/${mockTestId}/`,
+        `${process.env.REACT_APP_API_URL}/api/exams/submit/${mockTestId}/`,
         { answers: answersWithStringKeys },
         {
           headers: {
